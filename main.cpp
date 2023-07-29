@@ -1,15 +1,21 @@
 #include <iostream>
+#include <cstdlib>
+enum choice{
+    ROCK, 
+    PAPER,
+    SCISSOR
+};
+int getChoice();
 
 int main () {
-    int choice;
-    std:: cout << "1.Rock\n2.Paper\n3.Scissor\nEnter a number";
-    std:: cin >> choice;
-    
-    
-    return 0;
+
 
 }
-
-bool outcome() {
-
+int getChoice(){
+    int choice;
+    do{
+    std:: cout << "1.Rock\n2.Paper\n3.Scissor\nEnter a number\n";
+    std:: cin >> choice;
+    }while (choice <0 || choice > 2);
+    return choice;
 }
