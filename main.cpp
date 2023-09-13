@@ -3,9 +3,9 @@
 #include <random>
 #include "Player.h"
 enum choice{
-    ROCK, 
-    PAPER,
-    SCISSOR
+    ROCK = 1, 
+    PAPER = 2,
+    SCISSOR = 3
 };
 int getChoice();
 int determineWinner(choice Player1,choice Player2);
@@ -78,7 +78,7 @@ int getChoice(){
     do{
     std:: cout << "1.Rock\n2.Paper\n3.Scissor\nEnter a number\n";
     std:: cin >> choice;
-    }while (choice <0 || choice > 2);
+    }while (choice <0 || choice > 3);
     return choice;
 }
 
